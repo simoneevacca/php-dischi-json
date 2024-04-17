@@ -1,0 +1,49 @@
+header {
+    height: 60px;
+    background-color: #06131f;
+
+    & .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        & img {
+            width: 40px;
+        }
+    }
+}
+
+main {
+    background-color: #1d2d3c;
+
+    .container {
+        margin: auto;
+
+        & .row {
+            display: flex;
+            justify-content: space-between;
+
+            & .col-4 {
+
+                & .card {
+                    width: 300px;
+                    margin: 2rem auto;
+                    text-align: center;
+                    padding: 1rem;
+                    background-color: #112030;
+                    color: white;
+
+                    & strong {
+                        font-size: 1.2rem;
+                    }
+
+                    & img {
+                        margin: auto;
+                        width: 100%;
+
+                    }
+                }
+            }
+        }
+    }
+}

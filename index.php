@@ -16,22 +16,30 @@
 
     <div id="app">
 
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-4" v-for="disk in content">
-                    <div class="card">
-                        <img width="200px" :src="disk.poster" alt="">
-                        <div>{{disk.title}}</div>
-                        <div>{{disk.author}}</div>
-                        <div>{{disk.year}}</div>
-
-                    </div>
-                </div>
-
+        <header>
+            <div class="container">
+                <img src="./assets/image/Spotify_icon.svg.png" alt="">
             </div>
-        </div>
+        </header>
+        <main>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-4" v-for="disk in content">
+                        <div class="card">
+                            <img :src="disk.poster" alt="">
+                            <div><strong>{{disk.title}}</strong></div>
+                            <div>{{disk.author}}</div>
+                            <div><strong>{{disk.year}}</strong></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
