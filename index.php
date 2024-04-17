@@ -25,8 +25,8 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-4" v-for="disk in content">
-                        <div class="card">
+                    <div class="col-4" v-for="(disk, index) in content">
+                        <div class="card" @click="saveId(index)">
                             <img :src="disk.poster" alt="">
                             <div><strong>{{disk.title}}</strong></div>
                             <div>{{disk.author}}</div>
@@ -39,6 +39,15 @@
             </div>
 
         </main>
+
+        <div class="preview show" v-show="showPreview == true" >
+        <div>
+            {{content[idCard]}}
+
+        </div>
+        
+    </div>
+
 
     </div>
 
