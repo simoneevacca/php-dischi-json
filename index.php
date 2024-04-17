@@ -16,7 +16,16 @@
 
     <div id="app">
 
-        
+       
+
+        <div class="container">
+            <div class="row">
+                <div class="col" v-for="disk in content">
+                    <div class="card">{{disk.title}}</div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

@@ -4,14 +4,20 @@ createApp(
     {
         data() {
             return {
-                
+                content: [],
             }
         },
 
 
-        methods: {
-            
+        mounted() {
+          axios.get('dischi.json')
+          .then(response => {
+            this.content = response.data
+            console.log(this.content)
+          })
         }
+
+        
 
     }
 ).mount('#app')
