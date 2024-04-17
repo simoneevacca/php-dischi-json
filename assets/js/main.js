@@ -10,7 +10,7 @@ createApp(
 
 
         mounted() {
-          axios.get('dischi.json')
+          axios.get('api.php')
           .then(response => {
             this.content = response.data
             console.log(this.content)

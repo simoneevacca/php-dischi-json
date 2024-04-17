@@ -16,14 +16,20 @@
 
     <div id="app">
 
-       
+
 
         <div class="container">
             <div class="row">
-                <div class="col" v-for="disk in content">
-                    <div class="card">{{disk.title}}</div>
+                <div class="col-4" v-for="disk in content">
+                    <div class="card">
+                        <img width="200px" :src="disk.poster" alt="">
+                        <div>{{disk.title}}</div>
+                        <div>{{disk.author}}</div>
+                        <div>{{disk.year}}</div>
+
+                    </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
