@@ -17,6 +17,12 @@ createApp(
             this.showPreview = true;
             prefixCard = this.content[id]
             console.log(prefixCard);
+          },
+
+
+          close() {
+            this.showPreview = false;
+            console.log(this.showPreview);
           }
         },
 

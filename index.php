@@ -40,13 +40,24 @@
 
         </main>
 
-        <div class="preview show" v-show="showPreview == true" >
-        <div>
-            {{content[idCard]}}
+        <div class="preview show" v-if="showPreview == true">
+            <div class="container-preview">
+                <div class="cross" @click="close">X</div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <img :src="content[idCard].poster" alt="">
+                            <div><strong>{{content[idCard].title}}</strong></div>
+                            <div>{{content[idCard].author}}</div>
+                            <div><strong>{{content[idCard].year}}</strong></div>
+            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
         </div>
-        
-    </div>
 
 
     </div>
